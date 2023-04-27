@@ -57,18 +57,24 @@ h2 {font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida 
 
 }
 
+#skills ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+}
 
 #skills li {
     margin-left: auto;
     margin-right: auto;
-    width: 100px;
+    /* width: 100px; */
     text-align: center;
     border: 3px solid rgb(137, 150, 150);
     border-radius: 10px;
-    margin: 20px 20px;
+    margin: 10px 10px;
     padding: 20px;
     list-style-type:none;
-       
+  
+   
 
 }
 
@@ -78,15 +84,9 @@ h2 {font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida 
 }
 
 #skills {
-    max-width: 75%;
-}
+    max-width: 100%;
+} 
 
-
-#skills ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
-}
 
 
 {
@@ -292,6 +292,9 @@ footer {
        
    }
 
+   #skills ul {
+    grid-template-columns: 1fr;
+    }
 
 }
 
