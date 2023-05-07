@@ -1,21 +1,47 @@
 body {
+    display: inline-block;
     background-color: rgb(236, 250, 250);
     color: rgb(19, 101, 101);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin: 0 10px;
 }
 
-section, h1, h2, img, p {
+
+section, h2, img {
     margin: 15px;
     padding: 15px;
 }
 
+
+#about {
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* .img { */
+    /* padding: 20px; */
+/* } */
+
+img {
+  padding: 20px;
+  border: 5px solid  rgb(240, 241, 241);
+  border-style: double;
+  border-radius: 100%;
+  box-shadow: 10px 5px rgb(137, 150, 150);
+}
+
+
 h1 {
+    
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 30px;
+    font-size: 40px;
+    text-indent: 315px;
     font-weight: bold;
     font-style: italic;
     color: rgb(40, 111, 111);
+    margin-top: 1em;
+   
 }
 
 h2 {font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -35,6 +61,8 @@ h2 {font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida 
 
 }
 
+/* STYLE FOR SECTION PROJECTS */
+
 #projects p {
  
     margin-top: 2px;
@@ -42,18 +70,24 @@ h2 {font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida 
 
 }
 
+/* STYLE FOR LIST OF SKILLS */
+
+#skills ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+}
 
 #skills li {
     margin-left: auto;
     margin-right: auto;
-    width: 100px;
+    /* width: 100px; */
     text-align: center;
     border: 3px solid rgb(137, 150, 150);
     border-radius: 10px;
-    margin: 20px 20px;
+    margin: 10px 10px;
     padding: 20px;
-    list-style-type:none;
-       
+    list-style-type:none;  
 
 }
 
@@ -63,16 +97,10 @@ h2 {font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida 
 }
 
 #skills {
-    max-width: 75%;
-}
+    max-width: 100%;
+} 
 
-
-#skills ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
-}
-
+/* STYLE FOR FORM LEAVE MESSAGE */
 
 label {
     color: rgb(40, 111, 111);
@@ -82,11 +110,13 @@ label {
 }
 
 input, textarea {
+    width: 30%;
     font-size: 1rem;
-    padding: 25px;
-    margin: 20px;
+    padding: 10px;
+    margin: 10px;
     border: 3px solid rgb(137, 150, 150);
     border-radius: 10px;
+    
 }
 
 input:focus {
@@ -94,69 +124,194 @@ input:focus {
 }
 
 .button {
-    padding: 15px;
-    margin: 20px;
-    background-color: rgb(240, 241, 241);
-    color: rgb(137, 150, 150);
-    border: 3px solid rgb(137, 150, 150);
-    border-radius: 10px;
-}
-
-#messages li {
-    display: inline;
-    background-color: rgb(240, 241, 241);
-    color: rgb(137, 150, 150);
-}
-
-.removebutton {
+    margin: 10px;
     background-color: rgb(240, 241, 241);
     color: rgb(137, 150, 150);
     border: 3px solid rgb(137, 150, 150);
     border-radius: 5px;
 }
 
+
+.removebutton, .edit-button{
+    background-color: rgb(240, 241, 241);
+    color: rgb(137, 150, 150);
+    border: 3px solid rgb(137, 150, 150);
+    border-radius: 5px;
+    margin: 5px;
+}
+
+
+
+/* MAIN STYLE FOR FOOTER */
 footer {
-    background-color: azure;
+    background-color: rgb(241, 249, 249);
+    width: 100%;
     margin-top: 10px;
     padding: 10px;
 }
 
-img {
-    border: 5px solid  rgb(240, 241, 241);
-    border-style: double;
-    border-radius: 100%;
-    box-shadow: 10px 5px rgb(137, 150, 150);
-}
-.nav-item {
-    display: inline;
-    padding: 10px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+/* [ON BIG SCREEN] */
+/* (A) WRAPPER  */
+#hamnav {
+  display: flex;
+  width: 100%;
+  background: rgb(240, 241, 241);
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
 }
 
+#myname {
+  text-align: center;
+  padding-top: 10px;
+  margin: 10px;
+}
 
-.nav-list {
-    display: flex;
-    background-color: rgb(240, 241, 241);
-    position: sticky;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px;
-    justify-content: space-around;
-    margin: 0;
+#myname a {
+  color: rgb(40, 111, 111);
+  text-decoration: none;
 }
 
 
+/* (B) HORIZONTAL MENU ITEMS */
+#hamitems {
+  display: flex;
+  
+  
+}
+#hamitems a {
+  flex-grow: 1;
+  /* flex-basis: 0; */
+  padding: 10px;
+  margin: 10px;
+  color: rgb(40, 111, 111);
+  text-decoration: none;
+  text-align: center;
+}
+
+/* CHANGE COLOR FOR MAIN NAV ON HOVER */
+#hamitems a:hover { background: #e6dddd; }
+
+/* (C) HIDE HAMBURGER ICON */
+#hamnav label, #hamburger { display: none; }
+
+  
 .message-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: flex-start;
 }
 
 #messages li {
     display: inline;
+    background-color: rgb(240, 241, 241);
+    color: rgb(137, 150, 150);
     margin: 10px 10px;
 }
+
+
+
+/* SOCIAL MEDIA ICONS */
+#lab_social_icon_footer {
+    padding: 10px 0;
+  }
+  
+  #lab_social_icon_footer a {
+    color:  rgb(19, 101, 101);
+  }
+  
+  #lab_social_icon_footer .social:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+  }
+  
+  #lab_social_icon_footer .social {
+    -webkit-transform: scale(0.8);
+    
+    
+    -moz-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+  }
+
+  /* MULTICOLOURED HOVER VARIATIONS */
+  
+  #lab_social_icon_footer #social-fb:hover {
+    color: #3B5998;
+  }
+  
+  #lab_social_icon_footer #social-tw:hover {
+    color: #4099FF;
+  }
+  
+  #lab_social_icon_footer #social-gp:hover {
+    color: #d34836;
+  }
+  
+  #lab_social_icon_footer #social-em:hover {
+    color: #f39c12;
+  }
+  .container {
+    display: flex;
+    font-family: inherit;
+    justify-content: space-between;
+
+  }
+
+
+/* [ON--small-- SCREENS] */
+@media screen and (max-width: 768px){
+  /* (A) BREAK INTO VERTICAL MENU */
+  #ham { 
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  #hamnav {display: block;}
+  #hamitems a {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    box-sizing: border-box;
+    border-top: 1px solid #333;
+  }
+  /* (B) SHOW HAMBURGER ICON */
+  #hamnav label { 
+    display: inline-block; 
+    color: white;
+    background: rgba(0, 12, 12, 0.384);
+    font-style: normal;
+    font-size: 1.2em;
+    padding: 10px;
+  }
+
+  /* (C) HIDE MENU */
+  #hamitems { display: none; }
+  
+  /* TOGGLE SHOW HIDE */
+ 
+  #hamitems.show {
+    display: block;
+  }
+  
+  #hamnav {
+    position: sticky;
+    top: 0;
+  }
+
+  h1{
+    text-indent: 5rem;
+    /* margin-top: 5rem */
+  }
+  }
+
+  
+ 
+  /* STYLE FOR MOBILE VERSION */
 
 @media screen and (max-width: 450px) {
    p {
@@ -168,6 +323,36 @@ img {
    }
 
    h1 {
-    color: aqua
+    font-size: 20px;
+    text-indent: 140px;
+    color: rgb(105, 121, 121);
+       /* margin-top: 15rem; */
    }
+
+   #skills ul {
+    grid-template-columns: 1fr;
+    }
+
+    .nav-list {
+      /* grid-template-columns: repeat(3,1fr); */
+      flex-direction: column;
+    }
+
+    #about {
+      display: flex;
+      flex-direction: column;
+    }
+
+    footer {
+      box-sizing: border-box;
+  }
+
+  .container {
+    display: block;
+    text-align: center;
+
+  }
+
 }
+
+
