@@ -7,39 +7,47 @@
     <meta name="author" content="Anastasia Klyucharova">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
+    <script src="/js/hamnav.js"></script>
 
 </head>
     <body>
        <header>
-         <nav class="navbar">
+         <!-- MENU WRAPPER -->
+        <nav id="hamnav">
+             
+            <div id="ham">
+                        
+                <!-- NAME -->
+                <div id="myname">
+                    <a href="/index.html">Anastasia Klyucharova</a>
+                </div>
+    
+                <!-- THE BUBERGER ICON -->
+                <div >
+                    <label for="hamburger">&#9776;</label>
+                    <input type="checkbox" id="hamburger"/>
+                </div>      
                 
-                <!-- <a href="#about">Anastasia Klyucharova</a> -->
-            <div class="dropdown">
-                    <div><p>Anastasia Klyucharova</p></div>
-                    <div class="dropdown-content">
-                        <ul class="nav-list">
-                            <li class="nav-item"><a href="#about">About</a></li>
-                            
-                            <li class="nav-item"><a href="#experience">Experience</a></li> 
-
-                            <li class="nav-item"><a href="#skills">Skills</a></li>
-
-                            <li class="nav-item"><a href="#projects">Projects</a></li>
-
-                            <li class="nav-item"><a href="#leave_message">Leave message</a></li>
-
-                            <li class="nav-item"><a href="#footerContact">Contact Me</a></li>
-                         </ul>
-                    </div>
-                    <button class="dropbnt">
-                    <i class="fa fa-caret-down"></i>
-                    </button>
-            </div>     
+            </div>
+    
+                <!-- MENU ITEMS -->
+            <div id="hamitems">
+                
+                    <a href="#about">About</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#leave_message">Leave message</a>
+                    <a href="#footerContact">Contact Me</a>  
+            </div>
+        
         </nav>
         
         </header>
         
         <h1>Hi, I'm Anastasia!</h1></div>
+
+                <!-- ABOUT ME -->
         <section id = "about">
             <div class="img">
                 <img src="./image/nastya_small6.svg" alt="Anastasia Klyucharova"> 
@@ -55,6 +63,7 @@
             </div>     
         </section>
     
+                <!-- LIST WITH EXPERIENCE -->
         <section id = "experience">
             <h2>Experience</h2> 
                 <ul class="experience">
@@ -69,6 +78,7 @@
                 </ul>
         </section>
 
+                <!-- LIST OF MY PROJECTS FROM GITHUB -->
         <section id = "projects">
             <h2>Projects</h2>
              <ul></ul>
@@ -86,6 +96,8 @@
 <a href="https://github.com/AnastasiaKey">GitHub</a> <br>
 <a href="https://www.facebook.com/profile.php?id=100005285920837&sk=about">Facebook</a> <br>
         </section> -->
+
+                <!-- FORM FOR MESSAGE -->
             <section id = "leave_message">
                 <h2>Leave a Message</h2>
                     <form name="leave_message" method="get">
@@ -102,20 +114,25 @@
                <h2>Messages</h2> 
                <ul class="message-list"></ul>
             </section>
+
+                <!-- CONECT ME VIA SOCIAL MEDIA ICONS  -->
         <footer id="footerContact">
             
             <section id="lab_social_icon_footer">
                 <!-- Include Font Awesome Stylesheet in Header -->
                 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
                 <div class="container">
-                         <div id="footer_copy">
-                         </div>
-                        <div class="text-center center-block">
+                    
+                    <div id="footer_copy">
+                    
+                    </div>
+                    
+                    <div class="text-center center-block">
                                 <a href="https://www.facebook.com/profile.php?id=100005285920837&sk=about"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
                                 <a href="https://github.com/AnastasiaKey"><i id="social-tw" class="fa fa-git-square fa-3x social"></i></a>
                                 <a href="https://www.linkedin.com/in/anastasia-klyucharova-38b209141"><i id="social-gp" class="fa fa-linkedin-square fa-3x social"></i></a>
                                 <a href="mailto:klucharovanastya@gmail.com"><i id="social-gp" class="fa fa-envelope-square fa-3x social"></i></a>
-                        </div>   
+                    </div>   
                 </div>
                 </section>
         </footer>

@@ -19,14 +19,24 @@ section, h2, img {
 }
 
 
-.img {
-    padding: 20px;
+/* .img { */
+    /* padding: 20px; */
+/* } */
+
+img {
+  padding: 20px;
+  border: 5px solid  rgb(240, 241, 241);
+  border-style: double;
+  border-radius: 100%;
+  box-shadow: 10px 5px rgb(137, 150, 150);
 }
+
+
 h1 {
     
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 40px;
-    text-indent: 340px;
+    text-indent: 315px;
     font-weight: bold;
     font-style: italic;
     color: rgb(40, 111, 111);
@@ -51,12 +61,16 @@ h2 {font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida 
 
 }
 
+/* STYLE FOR SECTION PROJECTS */
+
 #projects p {
  
     margin-top: 2px;
     padding: 2px;
 
 }
+
+/* STYLE FOR LIST OF SKILLS */
 
 #skills ul {
     display: grid;
@@ -86,6 +100,7 @@ h2 {font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida 
     max-width: 100%;
 } 
 
+/* STYLE FOR FORM LEAVE MESSAGE */
 
 label {
     color: rgb(40, 111, 111);
@@ -126,13 +141,8 @@ input:focus {
 }
 
 
-img {
-    border: 5px solid  rgb(240, 241, 241);
-    border-style: double;
-    border-radius: 100%;
-    box-shadow: 10px 5px rgb(137, 150, 150);
-}
 
+/* MAIN STYLE FOR FOOTER */
 footer {
     background-color: rgb(241, 249, 249);
     width: 100%;
@@ -141,73 +151,52 @@ footer {
 }
 
 
-/* Контейнер навигации */
-
-.navbar {
-    display: flex;
-    overflow: hidden;
-    background-color: rgb(241, 249, 249);
-    font-family: 'Lucida Grande';
-  }
-
-
-/* Выпадающий контейнер */
-.dropdown {
-    float: left;
-    font-family: inherit;
-  }
-
-  
-/* Выпадающее содержимое (скрыто по умолчанию) */
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    z-index: 1;
-  }
-
-
-.nav-list {
-    display: flex;
-    flex-direction: row;
-    background-color: rgb(240, 241, 241);
-    font-family: inherit;
-    position: sticky;
-    top: 0;
-    left: 0;
-    width: auto;
-    padding: 10px;
-    justify-content: space-around;
-    margin: 0;
-
-}
-
-.nav-item {
+/* [ON BIG SCREEN] */
+/* (A) WRAPPER  */
+#hamnav {
   display: flex;
-  /* padding: 5px; */
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-
+  width: 100%;
+  background: rgb(240, 241, 241);
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
 }
+
+#myname {
+  text-align: center;
+  padding-top: 10px;
+  margin: 10px;
+}
+
+#myname a {
+  color: rgb(40, 111, 111);
+  text-decoration: none;
+}
+
+
+/* (B) HORIZONTAL MENU ITEMS */
+#hamitems {
+  display: flex;
   
-.nav-list a {
-    float: none;
-    color: rgb(40, 111, 111);
-    padding: 8px 10px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
-
-   /* Добавить серый цвет фона для выпадающих ссылок при наведении курсора */
- .dropdown-content a:hover {
-  background-color: #ddd;
-}
-
-/* Показать выпадающее меню при наведении курсора */
-.dropdown:hover .dropdown-content {
-  display: block;
   
 }
+#hamitems a {
+  flex-grow: 1;
+  /* flex-basis: 0; */
+  padding: 10px;
+  margin: 10px;
+  color: rgb(40, 111, 111);
+  text-decoration: none;
+  text-align: center;
+}
 
+/* CHANGE COLOR FOR MAIN NAV ON HOVER */
+#hamitems a:hover { background: #e6dddd; }
+
+/* (C) HIDE HAMBURGER ICON */
+#hamnav label, #hamburger { display: none; }
+
+  
 .message-list {
     display: flex;
     flex-wrap: wrap;
@@ -223,11 +212,9 @@ footer {
 
 
 
-
-/* icons */
+/* SOCIAL MEDIA ICONS */
 #lab_social_icon_footer {
     padding: 10px 0;
-    /* background-color: #dedede; */
   }
   
   #lab_social_icon_footer a {
@@ -242,7 +229,7 @@ footer {
   
   #lab_social_icon_footer .social {
     -webkit-transform: scale(0.8);
-    /* Browser Variations: */
+    
     
     -moz-transform: scale(0.8);
     -o-transform: scale(0.8);
@@ -250,9 +237,8 @@ footer {
     -moz-transition-duration: 0.5s;
     -o-transition-duration: 0.5s;
   }
-  /*
-      Multicoloured Hover Variations
-  */
+
+  /* MULTICOLOURED HOVER VARIATIONS */
   
   #lab_social_icon_footer #social-fb:hover {
     color: #3B5998;
@@ -275,7 +261,58 @@ footer {
     justify-content: space-between;
 
   }
+
+
+/* [ON--small-- SCREENS] */
+@media screen and (max-width: 768px){
+  /* (A) BREAK INTO VERTICAL MENU */
+  #ham { 
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  #hamnav {display: block;}
+  #hamitems a {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    box-sizing: border-box;
+    border-top: 1px solid #333;
+  }
+  /* (B) SHOW HAMBURGER ICON */
+  #hamnav label { 
+    display: inline-block; 
+    color: white;
+    background: rgba(0, 12, 12, 0.384);
+    font-style: normal;
+    font-size: 1.2em;
+    padding: 10px;
+  }
+
+  /* (C) HIDE MENU */
+  #hamitems { display: none; }
+  
+  /* TOGGLE SHOW HIDE */
  
+  #hamitems.show {
+    display: block;
+  }
+  
+  #hamnav {
+    position: sticky;
+    top: 0;
+  }
+
+  h1{
+    text-indent: 5rem;
+    /* margin-top: 5rem */
+  }
+  }
+
+  
+ 
+  /* STYLE FOR MOBILE VERSION */
+
 @media screen and (max-width: 450px) {
    p {
     font-size: 1rem;
@@ -287,9 +324,9 @@ footer {
 
    h1 {
     font-size: 20px;
-    text-indent: 160px;
+    text-indent: 140px;
     color: rgb(105, 121, 121);
-       margin-top: 15rem;
+       /* margin-top: 15rem; */
    }
 
    #skills ul {
@@ -310,14 +347,12 @@ footer {
       box-sizing: border-box;
   }
 
-}
+  .container {
+    display: block;
+    text-align: center;
 
-
-@media screen and (max-width: 750px) {
-
-  h1{
-    text-indent: 5rem;
-    /* margin-top: 5rem */
   }
 
 }
+
+
